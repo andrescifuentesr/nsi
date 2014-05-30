@@ -1,0 +1,71 @@
+.breadcrumb {
+	background: #fff;
+	box-shadow: 0 1px 5px $gris;
+	margin-bottom: 3em;
+
+	img {
+		display: block;
+	}
+
+	ul {
+		margin: 0 4em;
+		padding: 0.5em 0;
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		margin-right:2em;
+		//padding: 0.5em;
+	}
+
+	a {
+		position: relative;
+		padding-left: 0.5em;
+		color: $typo-noir;
+		font-size: 0.9em;
+		transition: .2s all ease-in;
+
+		&:hover {
+			color: $green-principal;
+			text-decoration: underline;
+		}
+
+		&::before {
+			content:"";
+			width:0;
+			height:0;
+			position: absolute;
+			left: 0;
+			top:50%;
+			transform: translate(0, -50%);
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $typo-gris;
+		}
+
+		&:hover::before {
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $typo-green;
+		}
+	}
+
+	.current-cat a {
+		color: $green-principal;
+		text-decoration: underline;
+	}
+	
+	//====================
+	//breadcrumb for pages
+	.current_page_item a {
+		color: $typo-green;
+		text-decoration: underline;
+
+		&::before {
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $typo-green;
+		}
+	}
+}

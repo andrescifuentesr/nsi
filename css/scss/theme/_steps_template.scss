@@ -1,0 +1,30 @@
+.steps {
+
+	.block-step-content {
+		display: inline-block;
+		vertical-align: top;
+		width: 80%;
+	}
+
+	.block-step {
+		margin: 3em 0;
+
+		h2 {
+			text-transform: uppercase;
+			padding-bottom: 0.2em;
+			border-bottom: 5px solid $green-principal;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: top;
+			width: 15%;
+			margin-right: 5%;
+		}
+	}
+
+	.block-first-step {
+		border-top: 1px dashed $green-principal;
+		padding-top: 3em;
+	}
+}

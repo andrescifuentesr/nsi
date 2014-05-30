@@ -1,0 +1,158 @@
+.site-main {
+	width:100%;
+	padding: 0 15% 1em;
+}
+
+//=============
+//slider
+//=============
+.slider-caption {
+	position: absolute;
+	top:0;
+	right:0;
+	height: 100%;
+	width: 30%;
+	display: block;
+	background: #c46d70;
+	z-index:9999;
+	color: $white;
+
+	.vertical-center {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		padding: 0 4em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+		text-transform: uppercase;
+		line-height: 1.2em;
+		padding-bottom: 0.5em;
+		position: relative;
+
+		&::after {
+			content:"";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 1em;
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	p {
+		text-transform: uppercase;
+		line-height: 2em;
+	}
+}
+
+//=============
+//Grid
+//=============
+.grid-feature {
+	//margin-left:-2em;
+}
+
+.grid-feature-item {
+				text-align: center;
+				background: #fff;
+				box-shadow: 1px 1px 5px #666666;
+				width: 30%;
+				display: inline-block;
+				vertical-align: top;
+}
+
+.grid-feature-item-gutter {
+	margin-right: 5%;
+}
+
+.grid-feature-title-content,
+.grid-feature-sub-title-content
+{
+	display:block;
+	text-align: left;
+	margin-left: 1em;
+	line-height: 1.2em;
+}
+
+.grid-feature-title-content {
+	color: $typo-noir;
+}
+
+.grid-feature-sub-title-content {
+	color: $typo-gris-light;
+	margin-bottom: 1em;
+}
+
+//==================
+//Grid Best Sellers
+//==================
+.page-header-home {
+	margin: 3em 0 2em;
+}
+
+.grid-best-seller{
+	//margin-left:-2em;
+}
+
+.grid-best-seller-item {
+	position: relative;
+	text-align: center;
+	//background: #fff;
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	border-right:2px solid #fff;
+	border-bottom:2px solid #fff;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		background: rgba(0, 0, 0 , 0.5);
+		transition: .2s all ease-in;
+	}
+
+	&:hover h3 {
+		opacity: 0;
+		transform: translate(0, 100%);
+	}
+
+	&:hover::after {
+		background: rgba(0, 0, 0 , 0);
+	}
+
+	img {
+		display:block;
+	}
+
+	h3 {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		z-index: 10;
+		transition: .2s all ease-in;
+	}
+}
+
+.grid-best-seller-item:nth-child(4n)  {
+	border-right:2px solid transparent;
+}
+
+.grid-best-seller-item:nth-child(9),
+.grid-best-seller-item:nth-child(10),
+.grid-best-seller-item:nth-child(11),
+.grid-best-seller-item:nth-child(12)  {
+	border-bottom:2px solid transparent;
+}

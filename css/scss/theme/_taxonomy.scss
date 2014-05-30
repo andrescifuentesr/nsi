@@ -1,0 +1,99 @@
+.archive .main-navigation .menu {
+	border-bottom: 10px solid $menu-green-hover;
+}
+
+//ribon
+.page-header {
+	position: relative;
+	width: 100%;
+	height: 5em;
+	margin-bottom: 2em;
+}
+
+.page-title {
+	text-align:center;
+	z-index:10;
+	width: 100%;
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	font-size:2em;
+	text-transform: uppercase;
+}
+
+.page-title::before {
+	content: "\2666";
+	font-size: 0.3em;
+	position: relative;
+	bottom: 0.5em;
+	left: -1em;
+}
+
+.page-title::after {
+	content: "\2666";
+	font-size: 0.3em;
+	position: relative;
+	bottom: 0.5em;
+	left: 1em;
+}
+
+.page-title-background {
+	position: absolute;
+	top:0;
+}
+
+//hide content
+.archive {
+	
+	article {
+		margin: 1em 0;
+		//height: 7em;
+		//overflow: hidden;
+
+	.entry-header {
+			width: 35%;
+			vertical-align: top;
+			display: inline-block;
+			border: 5px solid #AAAAAA;
+
+		.module-title-header {
+			position: relative;
+			float: left;
+			width: 50%;
+			height: 100%;
+		}
+
+		h1 {
+			font-size: 1em;
+			color: $typo-noir;
+			text-align: center;
+			padding: 1.8em 25%;
+		}
+
+		.module-image-header {
+			width: 50%;
+			float: left;
+			border-left: 5px solid #AAAAAA;
+		}
+		img {
+			display: block;
+		}
+	}
+
+	.entry-content {
+			width: 65%;
+			vertical-align: top;
+			display: inline-block;
+			padding: 1em 2em 0;
+
+		h2 {
+			color: $typo-noir;
+		}
+	}
+
+	p {
+		font-size: 0.85em;
+		line-height: 1.3em;
+	}
+}
+}

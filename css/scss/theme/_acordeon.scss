@@ -1,0 +1,178 @@
+.button-module-tab {
+	cursor: pointer;
+	background: #DAD7D7;
+}
+
+.hide-module-tab {
+	display:none;
+}
+
+.module-tab {
+	width: 100%;
+	background: #fff;
+	margin-top: 0.5em;
+	//display:none;
+
+	> ul {
+		margin: 0;
+		position: relative;
+	
+		> li {
+			display: block;
+			float:left;
+			width: percentage(1/6);
+			text-align: center;
+			border-right: 1px solid #fff;
+		}
+	}
+
+	label {
+		display: block;
+		color: #fff;
+		background: $menu-green;
+		padding:0.5em 0;
+		transition: 0.3s all ease-in;
+
+		&:hover {
+			cursor: pointer;
+			color:$noir;
+			background: $menu-green-hover;
+		}
+	}
+
+	input[type=radio] {
+		display: none;
+	}
+
+	.tab-content {
+		background: #fff;
+		width: 603%;
+		width: calc( 600% + 6px);
+		//height: 0;
+		opacity: 0;
+		position: relative;
+		text-align: left;
+		//transition: 0.2s all ease-in;
+	}
+
+	input[type=radio]:checked ~ .tab-content {
+		z-index: 10;
+		opacity: 1;
+		background: #fff;
+		color: $noir;
+		//height: 30em;
+	}
+
+	input[type=radio]:checked ~ label {
+		color:$noir;
+		background: $menu-green-hover;
+	}
+
+	.tab-content-1 {
+		//left: 100%;
+	}
+
+	.tab-content-2 {
+		left: -100%;
+		left: calc( -100% + -1px);
+	}
+
+	.tab-content-3 {
+		left: -200%;
+		left: calc( -200% + -2px);
+	}
+
+	.tab-content-4 {
+		left: -300%;
+		left: calc( -300% + -3px);
+	}
+
+	.tab-close {
+		position: absolute;
+		top:0;
+		right: 0;
+		width: 3em;
+		//color: $noir;
+		//background:#fff;
+	}
+
+	//style accordeon, not structure
+	.product-full-content {
+		width: 100%;
+		padding: 2em;
+	}
+
+	.product-half-content {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 60%;
+		padding: 2em;
+	}
+
+	.product-half-image {
+		display: inline-block;
+		vertical-align: top;
+		width: 40%;
+		padding: 2em;
+	}
+
+	h2 {
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0;
+		text-align: left;
+	}
+	
+	//===========
+	//Nutrition
+	.block-product-nutrition-benefit {
+		margin-bottom: 1.5em; 
+		padding-top: 1.5em;
+		text-align:left;
+		border-top: 1px dashed #AAAAAA;
+		border-bottom: 1px dashed #AAAAAA;
+	}
+
+	.also-available {
+		text-transform: uppercase;
+		margin: 2em 0;
+		text-align: center;
+	}
+
+	.icon-nutrition-top {
+		margin-top: 2em;
+	}
+
+	.one-quarter {
+		float: left;
+		width:25%;
+
+			img {
+				max-width:50%;
+				display: block;
+				margin: 0 auto;
+			}
+	}
+	//Nutrition
+	//===========
+
+	//===========
+	//Recipe
+	.recipe-subtitle, h3 {
+		margin-bottom: 1.5em;
+		padding-bottom: 0.5em;
+		border-bottom: 1px dashed #AAAAAA;
+	}
+
+	.bloc-recipe-ingredients {
+		text-align: left;
+
+		img {
+			float:right;
+		}
+	}
+}
