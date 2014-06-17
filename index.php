@@ -110,52 +110,52 @@ get_header(); ?>
 
 			<div class="grid-best-seller">
 				<div class="grid-best-seller-item">
-					<h3>Product 1</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-1.jpg" alt="">
+					<h3>Chia Seeds</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Chia.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 2</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-2.jpg" alt="">
+					<h3>Goji Berries</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Goji_Berries.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 3</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-3.jpg" alt="">
+					<h3>Cacao Beans</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Cacao.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 4</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-4.jpg" alt="">
+					<h3>Coconut</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Coconut.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 5</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-5.jpg" alt="">
+					<h3>Freezed Dried Apple</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Apple.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 6</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-6.jpg" alt="">
+					<h3>Freezed Dried BlueBerries</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/BlueBeries.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 7</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-7.jpg" alt="">
+					<h3>Freezed Dried Corn</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Corn.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 8</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-8.jpg" alt="">
+					<h3>Freezed Dried Bananas</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Banana.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 9</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-9.jpg" alt="">
+					<h3>Freezed Dried Strawberries</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Strawberries.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 10</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-10.jpg" alt="">
+					<h3>Freezed Dried Peas</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Peas.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 11</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-11.jpg" alt="">
+					<h3>Hemp Seeds</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Hemp_Seeds.jpg" alt="">
 				</div><!--
 			--><div class="grid-best-seller-item">
-					<h3>Product 12</h3>
-					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/grid-item-12.jpg" alt="">
+					<h3>Freezed Dried Raspberries</h3>
+					<img src="<?php bloginfo('template_directory'); ?>/img/grid-best-sellers/Raspberries.jpg" alt="">
 				</div>
 			</div>
 
