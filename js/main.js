@@ -15,18 +15,18 @@ jQuery(window).load(function(){
 //  Accordeon
 //========================
 jQuery(document).ready(function() {
-	jQuery('.button-module-tab').on('click', function () {
-		var ModuleTab = jQuery(this).next('.module-tab');
+
+	jQuery('.module-product-action').on('click', function () {
+		var ModuleTab = jQuery(this).siblings('.module-tab');
 
 		//show the first tab
 		ModuleTab.find('li:first input').attr('checked', 'checked');
 
-		jQuery('.module-tab').addClass('hide-module-tab');
-
 		//toggle module tab
-		ModuleTab.toggleClass('hide-module-tab');
+		ModuleTab.slideToggle();
 	});
+
 	jQuery('.button-tab-close').on('click', function () {
-		jQuery('.module-tab').addClass('hide-module-tab');
+		jQuery(this).closest(".module-tab").slideToggle();
 	});
 });

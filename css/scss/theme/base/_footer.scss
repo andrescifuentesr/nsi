@@ -2,6 +2,8 @@ footer {
 	margin-top: 4em;
 	background: $noir;
 	text-align:center;
+	@include mq(tablet) { margin-top: 2em;}
+	@include mq(phone) { margin-top: 2em;}
 
 	p {
 		margin: 0;

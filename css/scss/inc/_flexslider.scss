@@ -71,6 +71,8 @@ html[xmlns] .slides {display: block;}
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+	@include mq(tablet) { display:none;}
+	@include mq(phone) { display:none;}
 }
 .flex-direction-nav .flex-prev { left: -70px;  background:url('../../../img/fleche-back.png') no-repeat center center #ffffff; }
 .flex-direction-nav .flex-next { right: -70px; background:url('../../../img/fleche-forward.png') no-repeat center center #ffffff;}

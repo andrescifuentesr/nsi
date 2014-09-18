@@ -52,17 +52,32 @@
 
 @mixin mq($mq) {
   @if $mq == desk {
-    @media (min-width: 90em) { @content; }
+    @media (min-width: $break-point-lap) { @content; }
   }
   @if $mq == lap {
-     @media only screen and (min-width: 65em)  and (max-width:  90em) { @content; }
+     @media only screen and (min-width: $break-point-tablet)  and (max-width:  $break-point-lap) { @content; }
   }
   @if $mq == tablet {
-     @media only screen and (min-width: 40em)  and (max-width:  65em) { @content; }
+     @media only screen and (min-width: $break-point-phone)  and (max-width:  $break-point-tablet) { @content; }
   }
   @if $mq == phone {
-    @media (max-width: 40em) { @content; }
+    @media (max-width: $break-point-phone ) { @content; }
   }
+  @if $mq == bp-1100 {
+    @media (max-width: 1100px) { @content; }
+  } 
+  @if $mq == bp-1000 {
+    @media (max-width: 1000px) { @content; }
+  } 
+  @if $mq == bp-900 {
+    @media (max-width: 900px) { @content; }
+  } 
+  @if $mq == bp-800 {
+    @media (max-width: 800px) { @content; }
+  }  
+  @if $mq == bp-700 {
+    @media (max-width: 700px) { @content; }
+  } 
 }
 
 

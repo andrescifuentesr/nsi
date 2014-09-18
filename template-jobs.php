@@ -27,7 +27,7 @@ get_header(); ?>
 					</ul>
 				</div><!-- breadcrumb  -->
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('steps'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('section-jobs'); ?>>
 				
 					<header class="page-header">
 						<h1 class="page-title"><?php the_title();?></h1>
@@ -35,6 +35,8 @@ get_header(); ?>
 					</header><!-- .page-header -->		
 
 					<div class="entry-content">
+
+						<h2><?php _e( 'Job Postings', 'nsi' ); ?></h2>
 						
 						<?php
 							$args2 = array(
@@ -50,7 +52,24 @@ get_header(); ?>
 
 						<?php /* Start the Loop */ ?>
 						<?php while ($jobsQuery->have_posts()) : $jobsQuery->the_post(); ?>
-							<?php the_title(); ?>
+
+							<section>
+								<p>
+									<?php _e( 'Department', 'nsi' ); ?>: <?php the_field('department'); ?><br>
+									<?php _e( 'Position', 'nsi' ); ?>: <?php the_title(); ?><br>
+									<?php _e( 'Status', 'nsi' ); ?>: <?php the_field('status'); ?>
+								</p>
+								
+								<h3><?php _e( 'Primary Function', 'nsi' ); ?></h3>
+								<p><?php the_field('primary_function'); ?></p>
+
+								<?php if( get_field('more_information') ) { ?>
+									<a href="<?php the_field('more_information') ?>" target="_blank" class="bt-more">
+										<?php _e( 'More informations', 'nsi' ); ?>
+									</a>
+								<?php } ?>
+							</section>							
+
 						<?php endwhile; ?>
 
 					</div><!-- .entry-content -->

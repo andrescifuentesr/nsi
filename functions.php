@@ -99,6 +99,9 @@ function nsi_scripts() {
 	//wp_enqueue_script( 'nsi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	//wp_enqueue_script( 'nsi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	
+	//Modernizr
+	wp_enqueue_script( 'nsi-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.63353.js', array(), '20141011', true );
 
 	//Main JS
 	wp_enqueue_script( 'nsi-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20140401', true );

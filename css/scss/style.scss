@@ -1,25 +1,24 @@
 //structure
 @import 'structure/mixins';
 @import 'structure/variables';
-@import 'inc/template';
+@import 'structure/template';
 @import 'structure/grid';
 @import 'structure/typography';
 
 // inc
 @import 'inc/flexslider';
-// @import 'inc/supersized_shutter';
-// @import 'inc/fancybox';
 
 //theme
-@import 'theme/header';
+@import 'theme/base/header';
+@import 'theme/base/footer';
+@import 'theme/base/loader';
+@import 'theme/base/taxonomy';
+@import 'theme/base/page';
 @import 'theme/index';
-@import 'theme/footer';
-@import 'theme/loader';
-@import 'theme/taxonomy';
 @import 'theme/acordeon';
 @import 'theme/breadcrumb';
-@import 'theme/page';
 @import 'theme/steps_template';
+@import 'theme/jobs';
 @import 'theme/contact';
 
 
@@ -36,8 +35,8 @@ html {
 
 body {
 	// Ala Trent Walton
-	@include css-hyphens(auto);
-	@extend %breakword;
+	// @include css-hyphens(auto);
+	// @extend %breakword;
 	background: url('../../../img/background-noise.png') #e9e9e9;
 }
 

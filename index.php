@@ -21,84 +21,28 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="flexslider-wrapper loading">
-
-				<div class="spinner">
-					<div class="bounce1"></div>
-					<div class="bounce2"></div>
-					<div class="bounce3"></div>
-				</div>
-				
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<img src="<?php bloginfo('template_directory'); ?>/img/image-slider-01.jpg" />
-							<div class="slider-caption">
-								<div class="vertical-center">
-									<h2>CHIA SEEDS</h2>
-									<p>
-										Your direct source from South America
-									</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<img src="<?php bloginfo('template_directory'); ?>/img/image-slider-02.jpg" />
-							<div class="slider-caption">
-								<div class="vertical-center">
-									<h2>FREEZE DRIED FRUITS AND VEGGIES</h2>
-									<p>
-										Get your private brand quote today!
-									</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<img src="<?php bloginfo('template_directory'); ?>/img/image-slider-03.jpg" />
-							<div class="slider-caption">
-								<div class="vertical-center">
-									<h2>SUPERFOOD</h2>
-									<p>
-										The world most complete superfood
-									</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<img src="<?php bloginfo('template_directory'); ?>/img/image-slider-00.jpg" />
-							<div class="slider-caption">
-								<div class="vertical-center">
-									<h2>HIGHEST QUALITY STANDARDS</h2>
-									<p>
-										GFSI Certified Supply Chain
-									</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<?php get_template_part( 'inc/slider' );  ?>
 
 			<div class="grid-feature">
 				<div class="grid-feature-item grid-feature-item-gutter">
 					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/img/image-grid-00.jpg" alt="" class="icon-lupulo">
+						<img src="<?php bloginfo('template_directory'); ?>/img/sub-slider-home/strawberry.jpg" alt="" class="icon-lupulo">
 						<span class="grid-feature-title-content">CHIA SEEDS</span>
-						<span class="grid-feature-sub-title-content">Best seller</span>
+						<!-- <span class="grid-feature-sub-title-content">Best seller</span> -->
 					</a>
 				</div><!--
 			--><div class="grid-feature-item grid-feature-item-gutter">
 					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/img/image-grid-00.jpg" alt="" class="icon-lupulo">
+						<img src="<?php bloginfo('template_directory'); ?>/img/sub-slider-home/sustainability.jpg" alt="sustainability" class="icon-lupulo">
 						<span class="grid-feature-title-content">SUSTAINABILITY</span>
-						<span class="grid-feature-sub-title-content">Best seller</span>
+						<!-- <span class="grid-feature-sub-title-content">Best seller</span> -->
 					</a>
 				</div><!--
 			--><div class="grid-feature-item">
 					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/img/image-grid-00.jpg" alt="" class="icon-lupulo">
+						<img src="<?php bloginfo('template_directory'); ?>/img/sub-slider-home/food-safety.jpg" alt="food-safety" class="icon-lupulo">
 						<span class="grid-feature-title-content">FOOD SAFETY</span>
-						<span class="grid-feature-sub-title-content">Best seller</span>
+						<!-- <span class="grid-feature-sub-title-content">Best seller</span> -->
 					</a>
 				</div>
 			</div>

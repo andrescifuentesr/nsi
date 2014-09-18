@@ -2,6 +2,8 @@
 	background: #fff;
 	box-shadow: 0 1px 5px $gris;
 	margin-bottom: 3em;
+	@include mq(tablet) { margin-bottom: 1em;}
+	@include mq(phone) { margin-bottom: 1em;}
 
 	img {
 		display: block;
@@ -11,12 +13,16 @@
 		margin: 0 4em;
 		padding: 0.5em 0;
 		text-align: center;
+		@include mq(lap) { margin: 0 2em; }
+		@include mq(tablet) { margin: 0 1em; }
+		@include mq(phone) { margin: 0 1em; text-align: left;}
 	}
 
 	li {
 		display: inline-block;
 		margin-right:2em;
 		//padding: 0.5em;
+		@include mq(phone) { width:49%; margin-right: 0;}
 	}
 
 	a {

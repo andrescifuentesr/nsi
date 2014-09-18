@@ -25,12 +25,42 @@ class Menu_With_Description extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
 
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
+		$item_output .= '<a'. $attributes .'><span class="sub-item">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output .= '<span class="sub-description">' . $item->description . '</span>';
+		$item_output .= '</span><span class="sub-description">' . $item->description . '</span>';
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
+
+//======================
+//fx menuicons styles
+//======================
+function add_menu_icons_styles(){
+?>
+ 
+<style>
+#menu-posts-home-slider .wp-menu-image:before {
+	content: "\f161";
+}
+#menu-posts-job .wp-menu-image:before {
+	content: "\f338";
+}
+#menu-posts-best-sellers .wp-menu-image:before {
+	content: "\f174";
+}
+
+#menu-posts-superfood-products .dashicons-admin-post:before,
+#menu-posts-freezedried-products .dashicons-admin-post:before,
+#menu-posts-nuts-fruits-products .dashicons-admin-post:before
+{
+	content: "\f511";
+}
+
+</style>
+ 
+<?php
+}
+add_action( 'admin_head', 'add_menu_icons_styles' );

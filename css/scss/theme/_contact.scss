@@ -1,6 +1,8 @@
 .bloc-contact-text {
 	float:right;
 	width:30%;
+	@include mq(tablet) { width:100%;}
+	@include mq(phone) { width:100%;}
 
 	h1 {
 		color:$green-principal;
@@ -13,6 +15,8 @@
 	float:left;
 	width:60%;
 	margin-right: 10%;
+	@include mq(tablet) { width:100%; margin-right: 0;}
+	@include mq(phone) { width:100%; margin-right: 0;}
 
 	span {
 		width: 100%;
@@ -47,7 +51,9 @@
 		font-family: $font-family;
 		text-transform: uppercase;
 		//color:$typo-gris-dark;
-		transition: 0.2s all ease-in;
+		transition: 0.2s all ease-out;
+		@include mq(tablet) { width:100%;}
+		@include mq(phone) { width:100%;}
 
 		&:hover {
 			background-color: $green-principal;

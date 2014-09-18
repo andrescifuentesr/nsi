@@ -7,6 +7,9 @@
 	padding:1em 15%;
 	background: $white;
 	box-shadow: 0 1px 5px $gris-fonce;
+	@include mq(lap) { padding: 1em 10%;}
+	@include mq(tablet) { padding: 1em 5%;}
+	@include mq(phone) { padding: 0.5em 2%;}
 }
 
 .site-branding {
@@ -19,8 +22,8 @@
 .site-branding  a {
 	background: url('../../../img/logo-nsi.svg');
 	display : block;
-	height: 60px;
-	width: 140px;
+	height: 65px;
+	width: 160px;
 	text-indent: -9999px;
 }
 
@@ -31,7 +34,8 @@
 	width: 280px;
 	float: right;
 	display:inline-block;
-	margin-top: 1.2em;
+	margin-top: 1.4em;
+	@include mq(phone) { width:auto; margin-top: 0.5em;}
 }
 
 .bt-newsletter {
@@ -41,6 +45,7 @@
 	margin-bottom: 1em;
 	text-align: center;
 	border-right: 1px solid $gris;
+	@include mq(phone) { width:auto;}
 
 	a {
 		background: url('../../../img/bt-newsletter.png') no-repeat 40px center;
@@ -50,10 +55,15 @@
 		color: $noir;
 		font-weight:normal;
 		text-transform: uppercase;
+		@include mq(phone) { padding: 1em 1.25em; background-position: center center}
 
 		&:hover {
 			color: $green-principal;
 		}
+	}
+
+	span {
+		@include mq(phone) { display:none;}
 	}
 }
 
@@ -62,6 +72,7 @@
 	vertical-align:top;
 	width: 35%;
 	margin-bottom: 0.5em;
+	@include mq(phone) { width:auto;}
 
 	ul {
 		margin: 0;
@@ -134,12 +145,32 @@
 	width: 100%;
 	padding:0 15%;
 	z-index:9999;
-	//height:3em;
+	@include mq(lap) { padding: 0 10%;}
+	@include mq(tablet) { padding: 0 5%;}
+	@include mq(phone) { padding: 0 2%;}
 }
+//============
+//1st level
+//============
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	position: relative;
+}
+
+.main-navigation .sub-description {
+	// position: absolute;
+	top: 3em;
+	//left:2em;
+	padding-bottom: 0.5em;
+	display: block;
+	color: $typo-gris;
+	line-height: 1.4em;
+	width:100%;
+	text-align: left;
+	text-transform:none;
+	z-index:9999;
+	@include mq(phone) {display:none;}
 }
 
 .main-navigation .menu {
@@ -153,21 +184,28 @@
 
 .main-navigation .menu > li {
 	background: $menu-green;
-	position: relative;
+	background: linear-gradient(to bottom, $menu-green 0%, lighten($menu-green, 12%) 20%, lighten($menu-green, 5%) 60%, $menu-green 100%);
+	// position: relative;
 	display:inline-block;
-	height:3em;
-	padding:0.5em 0;
 	width: percentage(1/6);
 	vertical-align:middle;
 	//magic-number to fix inline-block problem
 	margin-right: -4px;
-	position: relative;
 	text-align:center;
-	line-height:0.75em;
+	line-height:0.95em;
 	cursor:pointer;
 	border-right: 1px solid $white;
 	//border-left: 1px solid $menu-green-dark;
 	transition: 0.3s all ease-in;
+	@include mq(tablet) {line-height:0.75em;}
+	@include mq(phone) {
+		width:100%;
+		height: inherit;
+		text-align:left;
+		padding: 0.25em 1em;
+		border-right:none;
+		border-bottom: 2px solid $white;
+	}
 
 	&:hover {
 		background: $menu-green-hover;
@@ -177,41 +215,89 @@
 		}
 	}
 }
+.main-navigation .sub-menu li:first-child {
+	padding: 0 3em .5em 2em;
+	margin-right: 0;
+	display: block;
+	color: $typo-gris;
+	text-transform: uppercase;
+	color: $typo-green;
+	line-height: 1.4em;
+	text-align: left;
+	z-index:9999;
+	@include mq(phone) {display:none;}
+
+	&:hover a { text-decoration:none}
+
+
+	&::before {
+		content:"";
+		border:none;
+	}
+
+	.sub-item {
+		font-size: 1.1em;
+		font-family: 'ralewaysemibold';
+	}
+
+	.sub-description {
+		border-top: 3px solid $typo-green;
+		padding: 1em 0 0;
+		margin-top: 0.5em;
+	}
+}
 
 .main-navigation li:last-child {
 	border-right: none;
 }
 
 .main-navigation .menu > li > a {
+	position: relative;
 	display:block;
+	height:4.8em;
 	text-decoration: none;
 	color:$white;
-	font-size: 0.75em;
+	font-size: 0.85em;
 	width:100%;
 	text-transform:uppercase;
-	//vertical-center
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
 	z-index:9000;
+	@include mq(tablet) {font-size:0.7em;}
+	@include mq(phone) {
+		position: static;
+		height:4em;
+		padding:0.5em 0;
+		font-size: 1em;
+		line-height:1.2em;
+		transform: translate(0, 0);
+	}
 
-	//height:24px;
+	.sub-item {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
+//============
+//2nd level
+//============
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
+	right:0;
 	position: absolute;
-	//top: 3.3em;
-	//top: 63px;
-	top: 48px;
+	top: 64px;
 	border-top:10px solid transparent;
 	z-index: 1000;
-	width: 604%;
-	width: calc( 600% + 6px);
-	padding: 2.5em 0 3em 200%;
+	min-height: 320px;
+	width:100%;
+	// width: 604%;
+	// width: calc( 600% + 6px);
+	padding: 2.5em 0 2em 0;
 
 	//fallback
 	background-color: #eaeaea;
@@ -235,8 +321,17 @@
 		no-repeat,
 		no-repeat,
 		no-repeat;
+	@include mq(tablet) { top:53px }
+	@include mq(phone) {
+		position: static;
+		width: 100%;
+		min-height:none;
+		background: #eaeaea;
+		padding: 0.5em 1.5em 1em;
+	}
 }
 
+/*
 .main-navigation #menu-item-18 ul {
 	left: -100%;
 	left: calc( -100% + -1px);
@@ -261,57 +356,18 @@
 	left: -500%;
 	left: calc( -500% + -1px);
 }
+*/
 
-.main-navigation .sub-description {
-	position: absolute;
-	top: 3em;
-	//left:2em;
-	padding-bottom: 0.5em;
-	display: block;
-	color: $typo-gris;
-	line-height: 1.4em;
-	width:100%;
-	text-align: left;
-	text-transform:none;
-	z-index:9999;
-}
+//============
+//2nd level
+//============
 
-.main-navigation .sub-menu li:first-child {
-	position: absolute;
-	//top: 5em;
-	left:2em;
-	padding: 0 0 0.5em 0;
-	margin-right: 0;
-	width:25%;
-	display: block;
-	color: $typo-gris;
-	text-transform: uppercase;
-	border-bottom: 2px solid $typo-green;
-	color: $typo-green;
-	line-height: 1.4em;
-	text-align: left;
-	z-index:9999;
-
-	&:hover a { text-decoration:none}
-
-
-	&::before {
-		content:"";
-		border:none;
-	}
-}
-
-
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
 .main-navigation ul ul a {
 	//width: 200px;
 	color: $typo-gris;
 }
 .main-navigation ul ul li {
-	width: percentage(1/2);
+	width: percentage(1/3);
 	display: inline-block;
 	float:left;
 	text-align: left;
@@ -320,6 +376,9 @@
 	//magic-number to fix inline-block problem
 	margin-right: -4px;
 	z-index:2000;
+	@include mq(phone) {
+		width: 100%;
+	}
 
 	&:hover::before {
 		border-top: 5px solid transparent;
@@ -371,7 +430,18 @@
 		display: block;
 	}
 
+	.menu-toggle {
+		display: inline-block;
+		color: #fff;
+		padding: 0.75em 0.75em 0.75em 2.25em;
+		font-size: 	1.25em;
+		background: url('../../../img/icon-menu.svg') no-repeat $green-principal 0.5em center ;
+	}
+
 	.main-navigation ul {
+		
 		display: none;
+
+		// display: block;
 	}
 }

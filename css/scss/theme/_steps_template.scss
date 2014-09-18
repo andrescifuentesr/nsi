@@ -4,10 +4,12 @@
 		display: inline-block;
 		vertical-align: top;
 		width: 80%;
+		@include mq(phone) { width: 100%;}
 	}
 
 	.block-step {
 		margin: 3em 0;
+		@include mq(phone) {margin: 1em 0;}
 
 		h2 {
 			text-transform: uppercase;
@@ -20,11 +22,13 @@
 			vertical-align: top;
 			width: 15%;
 			margin-right: 5%;
+			@include mq(phone) { width: 25%; margin: 1.5em auto 1em; display:block;}
 		}
 	}
 
 	.block-first-step {
 		border-top: 1px dashed $green-principal;
 		padding-top: 3em;
+		@include mq(phone) { padding-top: 1em;}
 	}
 }
