@@ -1134,8 +1134,8 @@ html[xmlns] .slides {
 }
 
 .flex-control-paging li a {
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   display: block;
   background: #666;
   background: rgba(0, 0, 0, 0.5);
@@ -1446,10 +1446,10 @@ html[xmlns] .slides {
 .main-navigation .menu > li > a {
   position: relative;
   display: block;
-  height: 4.8em;
+  height: 4em;
   text-decoration: none;
   color: white;
-  font-size: 0.85em;
+  font-size: 0.75em;
   width: 100%;
   text-transform: uppercase;
   z-index: 9000;
@@ -1484,7 +1484,7 @@ html[xmlns] .slides {
   left: 0;
   right: 0;
   position: absolute;
-  top: 64px;
+  top: 48px;
   border-top: 10px solid transparent;
   z-index: 1000;
   min-height: 320px;
@@ -1498,7 +1498,7 @@ html[xmlns] .slides {
 }
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .main-navigation ul ul {
-    top: 53px;
+    top: 44px;
   }
 }
 @media (max-width: 600px) {
@@ -2069,7 +2069,7 @@ footer p {
   text-align: center;
   background: #fff;
   box-shadow: 1px 1px 5px #666666;
-  width: 30%;
+  width: 31%;
   display: inline-block;
   vertical-align: top;
 }
@@ -2090,9 +2090,12 @@ footer p {
     margin: 0 auto 1em;
   }
 }
+.grid-feature-item img {
+  display: block;
+}
 
 .grid-feature-item-gutter {
-  margin-right: 5%;
+  margin-right: 3.5%;
 }
 @media only screen and (min-width: 900px) and (max-width: 1240px) {
   .grid-feature-item-gutter {
@@ -2114,19 +2117,19 @@ footer p {
 .grid-feature-sub-title-content {
   display: block;
   text-align: left;
-  text-transform: uppercase;
   margin-left: 1em;
   line-height: 1.2em;
-  padding-bottom: 0.5em;
 }
 
 .grid-feature-title-content {
   color: #111111;
+  margin-top: 0.5em;
+  text-transform: uppercase;
 }
 
 .grid-feature-sub-title-content {
   color: #7b7b7b;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .page-header-home {
@@ -2254,12 +2257,8 @@ footer p {
 /*****************************/
 /* tabs nav */
 /*****************************/
-.module-product-tab:hover .module-tab {
+.module-product-tab:hover .module-tab--list > li {
   display: block;
-}
-
-.hide-module-tab {
-  display: none;
 }
 
 .module-tab {
@@ -2272,7 +2271,7 @@ footer p {
   position: relative;
 }
 .module-tab > ul > li {
-  display: block;
+  display: none;
   float: left;
   width: 16.66667%;
   text-align: center;
@@ -2282,6 +2281,9 @@ footer p {
   .module-tab > ul > li {
     width: 100%;
   }
+}
+.module-tab > ul .module-tab--active {
+  display: block;
 }
 .module-tab label {
   display: block;
@@ -2424,8 +2426,8 @@ footer p {
   margin: 0 auto 1em;
 }
 .module-tab .recipe-subtitle, .module-tab h3 {
-  margin-bottom: 1.5em;
-  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
   border-bottom: 1px dashed #AAAAAA;
 }
 @media (max-width: 600px) {
@@ -2444,19 +2446,23 @@ footer p {
     float: none;
   }
 }
+.module-tab .bloc-recipe-ingredients ol, .module-tab .bloc-recipe-ingredients ul {
+  font-size: .85em;
+  line-height: 1.3em;
+}
 @media (max-width: 600px) {
   .module-tab .bloc-recipe-ingredients ol, .module-tab .bloc-recipe-ingredients ul {
     margin-left: 1em;
   }
 }
+.module-tab .bloc-recipe-preparation ol, .module-tab .bloc-recipe-preparation ul {
+  font-size: .85em;
+  line-height: 1.3em;
+}
 @media (max-width: 600px) {
   .module-tab .bloc-recipe-preparation ol, .module-tab .bloc-recipe-preparation ul {
     margin-left: 1em;
   }
-}
-
-.tab-content--active {
-  display: block;
 }
 
 .breadcrumb {
@@ -2594,6 +2600,112 @@ footer p {
   .steps .block-first-step {
     padding-top: 1em;
   }
+}
+
+.page-template-template-packaging-php .module-product-action {
+  background: #DAD7D7;
+  margin: 1em 0;
+}
+@media (max-width: 600px) {
+  .page-template-template-packaging-php .module-product-action {
+    margin: 0;
+  }
+}
+.page-template-template-packaging-php .entry-header {
+  width: 35%;
+  vertical-align: top;
+  display: inline-block;
+  border: 5px solid #AAAAAA;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .page-template-template-packaging-php .entry-header {
+    width: 30%;
+  }
+}
+@media (max-width: 600px) {
+  .page-template-template-packaging-php .entry-header {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+.page-template-template-packaging-php .entry-header .module-title-header {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+@media only screen and (min-width: 900px) and (max-width: 1240px) {
+  .page-template-template-packaging-php .entry-header .module-title-header {
+    display: none;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .page-template-template-packaging-php .entry-header .module-title-header {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .page-template-template-packaging-php .entry-header .module-title-header {
+    display: none;
+  }
+}
+.page-template-template-packaging-php .entry-header h1 {
+  font-size: 1em;
+  color: #111111;
+  text-align: center;
+  padding: 1.8em 10%;
+  margin: 0;
+}
+.page-template-template-packaging-php .entry-header .module-image-header {
+  width: 50%;
+  float: left;
+  border-left: 5px solid #AAAAAA;
+}
+@media only screen and (min-width: 900px) and (max-width: 1240px) {
+  .page-template-template-packaging-php .entry-header .module-image-header {
+    width: 100%;
+    border: none;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .page-template-template-packaging-php .entry-header .module-image-header {
+    width: 100%;
+    border: none;
+  }
+}
+@media (max-width: 600px) {
+  .page-template-template-packaging-php .entry-header .module-image-header {
+    width: 100%;
+    border: none;
+  }
+}
+.page-template-template-packaging-php .entry-header img {
+  display: block;
+}
+.page-template-template-packaging-php .entry-content {
+  width: 65%;
+  vertical-align: top;
+  display: inline-block;
+  padding: 1em 2em 0;
+  background: transparent;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .page-template-template-packaging-php .entry-content {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .page-template-template-packaging-php .entry-content {
+    width: 100%;
+    padding: 1em;
+  }
+}
+.page-template-template-packaging-php .entry-content h2 {
+  color: #111111;
+}
+.page-template-template-packaging-php p {
+  font-size: 0.85em;
+  line-height: 1.3em;
 }
 
 .section-jobs h2 {

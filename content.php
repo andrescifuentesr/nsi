@@ -24,29 +24,29 @@
 		</section>
 
 		<!-- Tabs Content -->
-		<section class="module-tab hide-module-tab clearfix">
-			<ul>
-				<li>
-					<input type="radio" id="tab-one-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="tab-one" checked="checked" >
+		<section class="module-tab clearfix">
+			<ul class="module-tab--list">
+				<li class="module-tab--item">
+					<input type="radio" id="tab-one-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="tab-one">
 					<label for="tab-one-<?php the_ID(); ?>"><?php _e( 'Overview', 'nsi' ); ?></label>
 					<?php get_template_part( 'inc/template-accordeon-overview' );  ?>
 				</li>
-				<li>
+				<li class="module-tab--item">
 					<input type="radio" id="tab-two-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="tab-two">
 					<label for="tab-two-<?php the_ID(); ?>"><?php _e( 'Packaging', 'nsi' ); ?></label>
 					<?php get_template_part( 'inc/template-accordeon-packaging' );  ?>
 				</li>
-				<li>
+				<li class="module-tab--item">
 					<input type="radio" id="tab-three-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="tab-three">
 					<label for="tab-three-<?php the_ID(); ?>"><?php _e( 'Nutrition', 'nsi' ); ?></label>
 					<?php get_template_part( 'inc/template-accordeon-nutrition' );  ?>
 				</li>
-				<li>
+				<li class="module-tab--item">
 					<input type="radio" id="tab-four-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="tab-four">
 					<label for="tab-four-<?php the_ID(); ?>"><?php _e( 'Recipes', 'nsi' ); ?></label>
 					<?php get_template_part( 'inc/template-accordeon-recipes' );  ?>
 				</li>
-				<li>
+				<li class="module-tab--item">
 					<input type="radio" id="tab-close-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="button-tab-close">
 					<label for="tab-close-<?php the_ID(); ?>" class="tab-close"><?php _e( 'X', 'nsi' ); ?></label>
 				</li>

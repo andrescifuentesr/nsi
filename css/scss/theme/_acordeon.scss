@@ -1,32 +1,34 @@
 /*****************************/
 /* tabs nav */
 /*****************************/
-.module-product-tab:hover .module-tab {
+.module-product-tab:hover .module-tab--list > li {
 	display: block;
 }
 
-
 .hide-module-tab {
-	display:none;
+	// display:none;
 }
 
 .module-tab {
 	width: 100%;
 	background: #fff;
 	margin-top: 0.5em;
-	//display:none;
 
 	> ul {
 		margin: 0;
 		position: relative;
 	
 		> li {
-			display: block;
+			display: none;
 			float:left;
 			width: percentage(1/6);
 			text-align: center;
 			border-right: 1px solid #fff;
 			@include mq(phone) { width:100%; }
+		}
+
+		.module-tab--active {
+			display:block;
 		}
 	}
 
@@ -173,8 +175,8 @@
 	//===========
 	//Recipe
 	.recipe-subtitle, h3 {
-		margin-bottom: 1.5em;
-		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		padding-bottom: 0.25em;
 		border-bottom: 1px dashed #AAAAAA;
 		@include mq(phone) { margin-bottom: 0.5em}
 	}
@@ -189,17 +191,21 @@
 		}
 
 		ol, ul  {
+			font-size: .85em;
+			line-height: 1.3em;
 			@include mq(phone) { margin-left: 1em; }
 		}
 	}
 
 	.bloc-recipe-preparation {
 		ol, ul  {
+			font-size: .85em;
+			line-height: 1.3em;
 			@include mq(phone) { margin-left: 1em; }
 		}
 	}
 }
 
 	.tab-content--active {
-		display:block;
+		// display:block;
 	}
