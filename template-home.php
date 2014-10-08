@@ -18,19 +18,22 @@ get_header(); ?>
 			<div class="grid-feature-item grid-feature-item-gutter">
 				<a href="<?php the_field('main_zone_left_link'); ?>">
 					<img src="<?php the_field('main_zone_left_image'); ?>" alt="<?php the_field('main_zone_left_text'); ?>" class="icon-lupulo">
-					<span class="grid-feature-title-content"><?php the_field('main_zone_left_text'); ?></span>
+					<span class="grid-feature-title-content"><?php the_field('main_zone_left_title'); ?></span>
+					<span class="grid-feature-sub-title-content"><?php the_field('main_zone_left_text'); ?></span>
 				</a>
 			</div><!--
 		--><div class="grid-feature-item grid-feature-item-gutter">
 				<a href="<?php the_field('main_zone_center_link'); ?>">
 					<img src="<?php the_field('main_zone_center_image'); ?>" alt="<?php the_field('main_zone_center_text'); ?>" class="icon-lupulo">
-					<span class="grid-feature-title-content"><?php the_field('main_zone_center_text'); ?></span>
+					<span class="grid-feature-title-content"><?php the_field('main_zone_center_title'); ?></span>
+					<span class="grid-feature-sub-title-content"><?php the_field('main_zone_center_text'); ?></span>
 				</a>
 			</div><!--
 		--><div class="grid-feature-item">
 				<a href="<?php the_field('main_zone_right_link'); ?>">
 					<img src="<?php the_field('main_zone_right_image'); ?>" alt="<?php the_field('main_zone_right_text'); ?>" class="icon-lupulo">
-					<span class="grid-feature-title-content"><?php the_field('main_zone_right_text'); ?></span>
+					<span class="grid-feature-title-content"><?php the_field('main_zone_right_title'); ?></span>
+					<span class="grid-feature-sub-title-content"><?php the_field('main_zone_right_text'); ?></span>
 				</a>
 			</div>
 		</div>

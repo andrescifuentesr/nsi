@@ -73,16 +73,20 @@
 	text-align: center;
 	background: #fff;
 	box-shadow: 1px 1px 5px #666666;
-	width: 30%;
+	width: 31%;
 	display: inline-block;
 	vertical-align: top;
 	@include mq(lap) { width: 32%; }
 	@include mq(tablet) { width: 32%; }
 	@include mq(phone) { width: 100%; max-width:400px; margin:0 auto 1em; }
+
+	img {
+		display: block;
+	}
 }
 
 .grid-feature-item-gutter {
-	margin-right: 5%;
+	margin-right: 3.5%;
 	@include mq(lap) { margin-right: 2%; }
 	@include mq(tablet) { margin-right: 2%; }
 	@include mq(phone) { margin-right: 0;}
@@ -93,19 +97,20 @@
 {
 	display:block;
 	text-align: left;
-	text-transform:uppercase;
 	margin-left: 1em;
 	line-height: 1.2em;
-	padding-bottom: 0.5em;
+	// padding-bottom: 0.5em;
 }
 
 .grid-feature-title-content {
 	color: $typo-noir;
+	margin-top: 0.5em;
+	text-transform:uppercase;
 }
 
 .grid-feature-sub-title-content {
 	color: $typo-gris-light;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 //==================
