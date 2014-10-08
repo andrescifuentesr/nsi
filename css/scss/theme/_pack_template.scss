@@ -1,0 +1,66 @@
+.page-template-template-packaging-php {
+
+	.module-product-action {
+		background: #DAD7D7;
+		margin: 1em 0;
+		@include mq(phone) { margin: 0;}
+	}
+
+	.entry-header {
+		width: 35%;
+		vertical-align: top;
+		display: inline-block;
+		border: 5px solid #AAAAAA;
+		@include mq(tablet) { width: 30%; }
+		@include mq(phone) { width: 100%; max-width: 500px;}
+
+		.module-title-header {
+			position: relative;
+			float: left;
+			width: 50%;
+			height: 100%;
+			@include mq(lap) { display: none;}
+			@include mq(tablet) { display: none;}
+			@include mq(phone) { display: none;}
+		}
+
+		h1 {
+			font-size: 1em;
+			color: $typo-noir;
+			text-align: center;
+			padding: 1.8em 10%;
+			margin: 0;
+		}
+
+		.module-image-header {
+			width: 50%;
+			float: left;
+			border-left: 5px solid #AAAAAA;
+			@include mq(lap) { width: 100%; border:none; }
+			@include mq(tablet) { width: 100%; border:none; }
+			@include mq(phone) { width: 100%; border:none; }
+		}
+		img {
+			display: block;
+		}
+	}
+
+	.entry-content {
+			width: 65%;
+			vertical-align: top;
+			display: inline-block;
+			padding: 1em 2em 0;
+			background: transparent;
+			@include mq(tablet) { width: 70%; }
+			@include mq(phone) { width:100%; padding: 1em}
+
+		h2 {
+			color: $typo-noir;
+		}
+	}
+
+	p {
+		font-size: 0.85em;
+		line-height: 1.3em;
+	}
+}
