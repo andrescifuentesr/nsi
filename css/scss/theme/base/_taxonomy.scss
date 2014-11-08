@@ -24,7 +24,9 @@
 
 			.module-title-header {
 				position: relative;
-				float: left;
+				// float: left;
+				display: inline-block;
+				vertical-align: middle;
 				width: 50%;
 				height: 100%;
 				@include mq(lap) { display: none;}
@@ -42,7 +44,9 @@
 
 			.module-image-header {
 				width: 50%;
-				float: left;
+				// float: left;
+				display: inline-block;
+				vertical-align: middle;
 				border-left: 5px solid #AAAAAA;
 				@include mq(lap) { width: 100%; border:none; }
 				@include mq(tablet) { width: 100%; border:none; }

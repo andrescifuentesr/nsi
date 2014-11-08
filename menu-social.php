@@ -5,7 +5,7 @@
 			'theme_location'  => 'social',
 			'container'       => 'div',
 			'container_id'    => 'menu-social',
-			'container_class' => 'menu-social',
+			'container_class' => 'menu-social clearfix',
 			'menu_id'         => 'menu-social-items',
 			'menu_class'      => 'menu-items clearfix',
 			'depth'           => 1,

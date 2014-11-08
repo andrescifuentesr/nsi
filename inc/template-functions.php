@@ -5,6 +5,43 @@
  * @package nsi
  */
 
+
+/**
+ * Register Socail Menu
+ */
+add_action( 'init', 'social_register_nav_menus' );
+
+function social_register_nav_menus() {
+	register_nav_menu( 'social', __( 'Social', 'nsi' ) );
+}
+
+
+/**
+ * Register Footer Menu
+ */
+add_action( 'init', 'footer_register_nav_menus' );
+
+function footer_register_nav_menus() {
+	register_nav_menu( 'footer', __( 'Footer', 'nsi' ) );
+}
+
+
+//======================
+//fx shortcode
+//======================
+function custom_button_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'link' => 'http://www.nsifood.com/company/contact-us/',
+	), $atts );	
+	return '<a class="bt-bustom" href="' . esc_attr($a['link']) . '">'. $content .'</a>';
+}
+add_shortcode( 'custom_button', 'custom_button_shortcode' );
+
+
+//======================
+//fx Menu Nav
+//======================
+
 class Menu_With_Description extends Walker_Nav_Menu {
 	function start_el(&$output, $item, $depth, $args) {
 		global $wp_query;

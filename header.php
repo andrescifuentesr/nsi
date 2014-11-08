@@ -46,10 +46,13 @@
 			</div><!--
 
 		--><div class="nav-social">
-				<div class="bt-newsletter">
-					<a href="#"><span>Newsletter</span></a>
+				<div class="bt-label">
+					<img src="<?php bloginfo('template_directory'); ?>/img/nsi-tagline.png">
 				</div><!--
-				--><?php get_template_part( 'menu', 'social' ); ?>
+				--><div class="wrapper-menu-social">
+					<?php get_template_part( 'menu', 'social' ); ?>
+					<!-- <a class="bt-home-contact" href="<?php echo get_permalink('147') ?>"><?php _e( 'Contact Us', 'nsi' ); ?></a> -->
+				</div>
 				<!-- #social menu -->
 			</div>
 		</div><!-- .site-header--top -->

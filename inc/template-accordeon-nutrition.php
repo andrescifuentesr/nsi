@@ -6,25 +6,30 @@
 		
 		<div class="icon-nutrition-top clearfix">
 			<?php if( in_array( 'usda', get_field('nutrition_qualifications') ) ) { ?>
-				<div class="one-quarter">
+				<div class="one-fifth">
 					<img src="<?php bloginfo('template_directory'); ?>/img/icon-usda.png" alt="usda" class="" >
 				</div>
 			<?php } ?>
 			<?php if( in_array( 'kosher', get_field('nutrition_qualifications') ) ) { ?>
-				<div class="one-quarter">
+				<div class="one-fifth">
 					<img src="<?php bloginfo('template_directory'); ?>/img/icon-kosher.svg" alt="Kosher" class="" >
 				</div>
 			<?php } ?>
 			<?php if( in_array( 'gmo', get_field('nutrition_qualifications') ) ) { ?>
-				<div class="one-quarter">
+				<div class="one-fifth">
 					<img src="<?php bloginfo('template_directory'); ?>/img/icon-gmo.png" alt="gmo" class="" >
 				</div>
 			<?php } ?>
 			<?php if( in_array( 'raw', get_field('nutrition_qualifications') ) ) { ?>
-				<div class="one-quarter">
+				<div class="one-fifth">
 					<img src="<?php bloginfo('template_directory'); ?>/img/icon-raw.svg" alt="Raw" class="" >
 				</div>
 			<?php } ?>
+			<?php if( in_array( 'gfsi', get_field('nutrition_qualifications') ) ) { ?>
+				<div class="one-fifth">
+					<img src="<?php bloginfo('template_directory'); ?>/img/icon-gfsi.svg" alt="Fair trade" class="" >
+				</div>
+			<?php } ?>			
 		</div>
 
 		<!-- <div class="also-available"><?php _e( 'Also available', 'nsi' ); ?></div> -->

@@ -31,21 +31,22 @@
 5.1 Menus socail et langues, Newsletter
 --------------------------------------------------------------*/
 .nav-social {
-	width: 280px;
+	// width: 400px;
 	float: right;
 	display:inline-block;
-	margin-top: 1.4em;
+	// margin-top: 1.4em;
 	@include mq(phone) { width:auto; margin-top: 0.5em;}
 }
 
-.bt-newsletter {
+.bt-label {
 	display:inline-block;
-	vertical-align:top;
-	width: 65%;
-	margin-bottom: 1em;
+	vertical-align:middle;
+	// width: 75%;
+	// margin-bottom: 1em;
+	padding-right: 1em;
 	text-align: center;
 	border-right: 1px solid $gris;
-	@include mq(phone) { width:auto;}
+	@include mq(phone) { display:none; }
 
 	a {
 		background: url('../../../img/bt-newsletter.png') no-repeat 40px center;
@@ -67,17 +68,33 @@
 	}
 }
 
-.menu-social{
+.wrapper-menu-social {
 	display:inline-block;
-	vertical-align:top;
-	width: 35%;
-	margin-bottom: 0.5em;
-	@include mq(phone) { width:auto;}
+	vertical-align:middle;
+	// width: 25%;
+	// margin-top: 0.5em;
+	margin-left: 1em;
+	@include mq(phone) { width:auto; margin-top: 0.75em; }
+
+	.bt-home-contact {
+		text-align: center;
+		display: block;
+		margin-top: 0.5em;
+		color:$typo-noir;
+
+		&:hover {
+			color: $green-principal;
+		}
+	}
+} 
+
+.menu-social{
+
 
 	ul {
 		margin: 0;
 		//width: 130px;
-		float: right;
+		// float: right;
 	}
 
 
@@ -258,6 +275,7 @@
 	text-decoration: none;
 	color:$white;
 	font-size: 0.75em;
+	font-family: 'ralewaysemibold';
 	width:100%;
 	text-transform:uppercase;
 	z-index:9000;
@@ -293,11 +311,9 @@
 	top: 48px;
 	border-top:10px solid transparent;
 	z-index: 1000;
-	min-height: 320px;
-	width:100%;
-	// width: 604%;
-	// width: calc( 600% + 6px);
-	padding: 2.5em 0 2em 0;
+	min-height: 330px;
+	width: 100%;
+	padding: 2em 0 2em;
 
 	//fallback
 	background-color: #eaeaea;
@@ -331,32 +347,6 @@
 	}
 }
 
-/*
-.main-navigation #menu-item-18 ul {
-	left: -100%;
-	left: calc( -100% + -1px);
-}
-
-.main-navigation #menu-item-19 ul {
-	left: -200%;
-	left: calc( -200% + -2px);
-}
-
-.main-navigation #menu-item-160 ul {
-	left: -300%;
-	left: calc( -300% + -3px);
-}
-
-.main-navigation #menu-item-161 ul {
-	left: -400%;
-	left: calc( -400% + -4px);
-}
-
-.main-navigation #menu-item-166 ul {
-	left: -500%;
-	left: calc( -500% + -1px);
-}
-*/
 
 //============
 //2nd level
@@ -371,7 +361,7 @@
 	display: inline-block;
 	float:left;
 	text-align: left;
-	padding: 0.7em 0 0.7em 1em;
+	padding: 0.4em 0 0.4em 1em;
 	position:relative;
 	//magic-number to fix inline-block problem
 	margin-right: -4px;

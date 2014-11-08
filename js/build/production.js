@@ -1211,11 +1211,13 @@ jQuery(window).load(function(){
 //  Accordeon
 //========================
 jQuery(document).ready(function() {
+/*
 	jQuery('.module-tab--item').hover(function () {
 		jQuery(this).find('input').attr('checked', 'true');
 	}, function () {
 		jQuery('.module-tab--item').find('input').attr('checked', 'false');
 	});
+
 	jQuery('.module-product-action').on('click', function () {
 		var ModuleTab = jQuery(this).siblings('.module-tab');
 
@@ -1223,4 +1225,5 @@ jQuery(document).ready(function() {
 		ModuleTab.find('.module-tab--item').toggleClass('module-tab--active');
 
 	});
+*/
 });

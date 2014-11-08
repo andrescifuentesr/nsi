@@ -1,5 +1,6 @@
 footer {
 	margin-top: 4em;
+	font-size: 0.75em;
 	background: $noir;
 	text-align:center;
 	@include mq(tablet) { margin-top: 2em;}
@@ -9,6 +10,22 @@ footer {
 		margin: 0;
 		padding: 1em 0;
 		color: $white;
-		font-size: 0.75em;
+		display: inline-block;
+	}
+}
+
+.menu-footer {
+	display: inline-block;
+	margin-right: 1em;
+
+	ul	{
+		margin: 0;
+		list-style: none;
+	}
+
+	a {
+		color:#fff;
+		text-transform: uppercase;
+		text-decoration: underline;
 	}
 }

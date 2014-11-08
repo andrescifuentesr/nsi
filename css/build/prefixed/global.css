@@ -1408,10 +1408,8 @@ html[xmlns] .slides {
 --------------------------------------------------------------*/
 
 .nav-social {
-  width: 280px;
   float: right;
   display: inline-block;
-  margin-top: 1.4em;
 }
 
 @media (max-width: 600px) {
@@ -1421,22 +1419,21 @@ html[xmlns] .slides {
   }
 }
 
-.bt-newsletter {
+.bt-label {
   display: inline-block;
-  vertical-align: top;
-  width: 65%;
-  margin-bottom: 1em;
+  vertical-align: middle;
+  padding-right: 1em;
   text-align: center;
   border-right: 1px solid #eaeaea;
 }
 
 @media (max-width: 600px) {
-  .bt-newsletter {
-    width: auto;
+  .bt-label {
+    display: none;
   }
 }
 
-.bt-newsletter a {
+.bt-label a {
   background: url("../../../img/bt-newsletter.png") no-repeat 40px center;
   display: block;
   padding-left: 3.5em;
@@ -1447,38 +1444,48 @@ html[xmlns] .slides {
 }
 
 @media (max-width: 600px) {
-  .bt-newsletter a {
+  .bt-label a {
     padding: 1em 1.25em;
     background-position: center center;
   }
 }
 
-.bt-newsletter a:hover {
+.bt-label a:hover {
   color: #0d6d4d;
 }
 
 @media (max-width: 600px) {
-  .bt-newsletter span {
+  .bt-label span {
     display: none;
   }
 }
 
-.menu-social {
+.wrapper-menu-social {
   display: inline-block;
-  vertical-align: top;
-  width: 35%;
-  margin-bottom: 0.5em;
+  vertical-align: middle;
+  margin-left: 1em;
 }
 
 @media (max-width: 600px) {
-  .menu-social {
+  .wrapper-menu-social {
     width: auto;
+    margin-top: 0.75em;
   }
+}
+
+.wrapper-menu-social .bt-home-contact {
+  text-align: center;
+  display: block;
+  margin-top: 0.5em;
+  color: #111111;
+}
+
+.wrapper-menu-social .bt-home-contact:hover {
+  color: #0d6d4d;
 }
 
 .menu-social ul {
   margin: 0;
-  float: right;
 }
 
 .menu-social li {
@@ -1686,6 +1693,7 @@ html[xmlns] .slides {
   text-decoration: none;
   color: white;
   font-size: 0.75em;
+  font-family: 'ralewaysemibold';
   width: 100%;
   text-transform: uppercase;
   z-index: 9000;
@@ -1728,9 +1736,9 @@ html[xmlns] .slides {
   top: 48px;
   border-top: 10px solid transparent;
   z-index: 1000;
-  min-height: 320px;
+  min-height: 330px;
   width: 100%;
-  padding: 2.5em 0 2em 0;
+  padding: 2em 0 2em;
   background-color: #eaeaea;
   background: -webkit-linear-gradient(top, white 0%, white 100%), -webkit-linear-gradient(top, white 0%, white 100%), -webkit-linear-gradient(top, white 0%, white 30%, #eaeaea 100%);
   background: linear-gradient(to bottom, white 0%, white 100%), linear-gradient(to bottom, white 0%, white 100%), linear-gradient(to bottom, white 0%, white 30%, #eaeaea 100%);
@@ -1764,7 +1772,7 @@ html[xmlns] .slides {
   display: inline-block;
   float: left;
   text-align: left;
-  padding: 0.7em 0 0.7em 1em;
+  padding: 0.4em 0 0.4em 1em;
   position: relative;
   margin-right: -4px;
   z-index: 2000;
@@ -1838,6 +1846,7 @@ html[xmlns] .slides {
 
 footer {
   margin-top: 4em;
+  font-size: 0.75em;
   background: #333333;
   text-align: center;
 }
@@ -1858,7 +1867,23 @@ footer p {
   margin: 0;
   padding: 1em 0;
   color: white;
-  font-size: 0.75em;
+  display: inline-block;
+}
+
+.menu-footer {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.menu-footer ul {
+  margin: 0;
+  list-style: none;
+}
+
+.menu-footer a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .spinner {
@@ -1954,7 +1979,8 @@ footer p {
 
 .archive article .entry-header .module-title-header {
   position: relative;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 50%;
   height: 100%;
 }
@@ -1987,7 +2013,8 @@ footer p {
 
 .archive article .entry-header .module-image-header {
   width: 50%;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   border-left: 5px solid #AAAAAA;
 }
 
@@ -2759,18 +2786,18 @@ footer p {
   }
 }
 
-.module-tab .one-quarter {
+.module-tab .one-fifth {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 
 @media (max-width: 600px) {
-  .module-tab .one-quarter {
+  .module-tab .one-fifth {
     width: 50%;
   }
 }
 
-.module-tab .one-quarter img {
+.module-tab .one-fifth img {
   max-width: 50%;
   display: block;
   margin: 0 auto 1em;
@@ -3328,6 +3355,23 @@ h4 {
   font-size: 1.2em;
   font-family: 'ralewayregular';
   font-weight: normal;
+}
+
+.bt-bustom {
+  background: #0d6d4d;
+  padding: .5em 1em;
+  color: #fff;
+  margin-top: 1em;
+  display: inline-block;
+  font-size: .85em;
+  -webkit-transition: 0.3s background ease-in;
+  transition: 0.3s background ease-in;
+}
+
+.bt-bustom:hover {
+  cursor: pointer;
+  color: #333333;
+  background: #d3f385;
 }
 
 /* ========= Helperclass =========== */

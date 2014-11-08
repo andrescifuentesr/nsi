@@ -67,6 +67,22 @@ h4 {
 	font-weight:normal;
 }
 
+.bt-bustom {
+	background: $green-principal;
+	padding: .5em 1em;
+	color: #fff;
+	margin-top: 1em;
+	display: inline-block;
+	font-size: .85em;
+	transition: 0.3s background ease-in;
+
+	&:hover {
+		cursor: pointer;
+		color:$noir;
+		background: $menu-green-hover;
+	}
+}
+
 
 /* ========= Helperclass =========== */	
 
