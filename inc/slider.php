@@ -24,15 +24,17 @@
 			<?php while ($sliderHome->have_posts()) : $sliderHome->the_post(); ?>
 				<?php $image_slider = get_field('home_slider_image'); ?>
 				<li>
-					<img src="<?php echo $image_slider['url']; ?>" alt="<?php echo $image_slider['alt']; ?>" >
-					<div class="slider-caption">
-						<div class="vertical-center">
-							<h2><?php the_title(); ?></h2>
-							<p>
-								<?php the_field('home_slider_legend'); ?>
-							</p>
+					<a href="<?php the_field('home_slider_link'); ?>">
+						<img src="<?php echo $image_slider['url']; ?>" alt="<?php echo $image_slider['alt']; ?>" >
+						<div class="slider-caption">
+							<div class="vertical-center">
+								<h2><?php the_title(); ?></h2>
+								<p>
+									<?php the_field('home_slider_legend'); ?>
+								</p>
+							</div>
 						</div>
-					</div>
+					</a>
 				</li>
 			<?php endwhile; ?>
 		</ul>

@@ -47,7 +47,7 @@
 
 		--><div class="nav-social">
 				<div class="bt-label">
-					<img src="<?php bloginfo('template_directory'); ?>/img/nsi-tagline.png">
+					<img src="<?php bloginfo('template_directory'); ?>/img/nsi-tagline.svg">
 				</div><!--
 				--><div class="wrapper-menu-social">
 					<?php get_template_part( 'menu', 'social' ); ?>

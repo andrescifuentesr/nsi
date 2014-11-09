@@ -1190,7 +1190,19 @@ html[xmlns] .slides {
 }
 
 .site-branding {
+  width: 22.5%;
   display: inline-block;
+  vertical-align: bottom;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .site-branding {
+    vertical-align: middle;
+  }
+}
+@media (max-width: 600px) {
+  .site-branding {
+    vertical-align: middle;
+  }
 }
 .site-branding h1 {
   margin: 0;
@@ -1208,61 +1220,57 @@ html[xmlns] .slides {
 5.1 Menus socail et langues, Newsletter
 --------------------------------------------------------------*/
 .nav-social {
-  float: right;
+  width: 77.5%;
+  text-align: right;
   display: inline-block;
+  vertical-align: bottom;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .nav-social {
+    vertical-align: middle;
+  }
 }
 @media (max-width: 600px) {
   .nav-social {
-    width: auto;
-    margin-top: 0.5em;
+    vertical-align: middle;
   }
 }
 
 .bt-label {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
+  width: 80%;
   padding-right: 1em;
   text-align: center;
-  border-right: 1px solid #eaeaea;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .bt-label {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .bt-label {
     display: none;
   }
 }
-.bt-label a {
-  background: url("../../../img/bt-newsletter.png") no-repeat 40px center;
+.bt-label img {
   display: block;
-  padding-left: 3.5em;
-  position: relative;
-  color: #333333;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-@media (max-width: 600px) {
-  .bt-label a {
-    padding: 1em 1.25em;
-    background-position: center center;
-  }
-}
-.bt-label a:hover {
-  color: #0d6d4d;
-}
-@media (max-width: 600px) {
-  .bt-label span {
-    display: none;
-  }
+  margin: 0 auto;
 }
 
 .wrapper-menu-social {
   display: inline-block;
-  vertical-align: middle;
-  margin-left: 1em;
+  vertical-align: top;
+  width: 20%;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .wrapper-menu-social {
+    width: auto;
+  }
 }
 @media (max-width: 600px) {
   .wrapper-menu-social {
     width: auto;
-    margin-top: 0.75em;
   }
 }
 .wrapper-menu-social .bt-home-contact {
@@ -1275,6 +1283,9 @@ html[xmlns] .slides {
   color: #0d6d4d;
 }
 
+.menu-social {
+  float: right;
+}
 .menu-social ul {
   margin: 0;
 }
@@ -1413,7 +1424,7 @@ html[xmlns] .slides {
 }
 
 .main-navigation .sub-menu li:first-child {
-  padding: 0 3em .5em 2em;
+  padding: 0 3em 1.5em 2em;
   margin-right: 0;
   display: block;
   color: #4a4a4a;
@@ -1422,6 +1433,16 @@ html[xmlns] .slides {
   line-height: 1.4em;
   text-align: left;
   z-index: 9999;
+}
+@media only screen and (min-width: 900px) and (max-width: 1240px) {
+  .main-navigation .sub-menu li:first-child {
+    padding: 0 3em 0 2em;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .main-navigation .sub-menu li:first-child {
+    padding: 0 3em 0 2em;
+  }
 }
 @media (max-width: 600px) {
   .main-navigation .sub-menu li:first-child {
@@ -1625,10 +1646,21 @@ footer p {
   margin: 0;
   list-style: none;
 }
+.menu-footer li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #fff;
+}
+.menu-footer li:first-child {
+  margin-left: 1em;
+  border-left: 1px solid #fff;
+}
+.menu-footer li:last-child {
+  border-right: none;
+}
 .menu-footer a {
   color: #fff;
   text-transform: uppercase;
-  text-decoration: underline;
 }
 
 .spinner {
@@ -2256,6 +2288,11 @@ footer p {
 /* tabs nav */
 /*****************************/
 .module-product-tab:hover .module-tab--list > li {
+  display: block;
+}
+
+.module-tab--list.module-tab--list--active .module-tab--item,
+.module-tab--list.module-tab--list--active .module-tab--item--close {
   display: block;
 }
 

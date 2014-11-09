@@ -46,7 +46,7 @@
 					<label for="tab-four-<?php the_ID(); ?>"><?php _e( 'Recipes', 'nsi' ); ?></label>
 					<?php get_template_part( 'inc/template-accordeon-recipes' );  ?>
 				</li>
-				<li class="module-tab--item">
+				<li class="module-tab--item--close">
 					<input type="radio" id="tab-close-<?php the_ID(); ?>" name="tab-set-<?php the_ID(); ?>" class="button-tab-close">
 					<label for="tab-close-<?php the_ID(); ?>" class="tab-close"><?php _e( 'X', 'nsi' ); ?></label>
 				</li>

@@ -23,9 +23,23 @@ footer {
 		list-style: none;
 	}
 
+	li {
+		display: inline;
+		padding: 0 1em;
+		border-right: 1px solid #fff;
+
+		&:first-child {
+			margin-left: 1em;
+			border-left: 1px solid #fff;
+		}
+
+		&:last-child {
+			border-right: none;	
+		}
+	}
+
 	a {
 		color:#fff;
 		text-transform: uppercase;
-		text-decoration: underline;
 	}
 }

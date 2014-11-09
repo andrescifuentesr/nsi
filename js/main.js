@@ -12,22 +12,34 @@ jQuery(window).load(function(){
 });
 
 //========================
-//  Accordeon
+//  Accordeon Tabs
 //========================
 jQuery(document).ready(function() {
-/*
-	jQuery('.module-tab--item').hover(function () {
-		jQuery(this).find('input').attr('checked', 'true');
-	}, function () {
-		jQuery('.module-tab--item').find('input').attr('checked', 'false');
+
+	jQuery('.module-tab--item').find('input').on('click', function () {
+
+		var previousValue = jQuery(this).attr('previousValue');
+		var name = jQuery(this).attr('name');
+
+		//we check if the radio input is checked
+		if (previousValue == 'checked') {
+			jQuery(this).removeAttr('checked');
+			jQuery(this).attr('previousValue', false);
+
+			//we remove a .module-tab--active
+			jQuery(this).closest('.module-tab--list').removeClass('module-tab--list--active');
+		//we check if the radio input is NOT checked
+		} else {
+			jQuery("input[name="+name+"]:radio").attr('previousValue', false);
+			jQuery(this).attr('previousValue', 'checked');
+
+			//we add a .module-tab--active
+			jQuery(this).closest('.module-tab--list').addClass('module-tab--list--active');
+		}
 	});
 
-	jQuery('.module-product-action').on('click', function () {
-		var ModuleTab = jQuery(this).siblings('.module-tab');
-
-		//show the first tab
-		ModuleTab.find('.module-tab--item').toggleClass('module-tab--active');
-
+	//we remove a .module-tab--active clickin on close button
+	jQuery('.tab-close').on('click', function () {
+		jQuery(this).closest('.module-tab--list').removeClass('module-tab--list--active');
 	});
-*/
 });

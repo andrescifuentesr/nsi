@@ -5,6 +5,11 @@
 	display: block;
 }
 
+.module-tab--list.module-tab--list--active .module-tab--item,
+.module-tab--list.module-tab--list--active .module-tab--item--close {
+	display:block;
+}
+
 .hide-module-tab {
 	// display:none;
 }

@@ -12,8 +12,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php get_template_part( 'menu', 'footer' ); ?>
 			<p>© <?php echo date('Y'); ?> NSI - ALL RIGHTS RESERVED</p>
+			<?php get_template_part( 'menu', 'footer' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
