@@ -40,7 +40,7 @@ get_header(); ?>
 						<div class="block-step block-first-step">
 							<img src="<?php bloginfo('template_directory'); ?>/img/icon-select-product.svg" alt="icon shopping car"><!--
 						--><div class="block-step-content">
-								<h2><?php _e( '1 - Select Product', 'nsi' ); ?></h2>
+								<h2><?php _e( '1 - Choose your product', 'nsi' ); ?></h2>
 								<p><?php the_field('select_product'); ?></p>
 							</div>
 						</div>
@@ -48,7 +48,7 @@ get_header(); ?>
 						<div class="block-step">
 							<img src="<?php bloginfo('template_directory'); ?>/img/icon-select-packaging.svg" alt="icon NSI"><!--
 						--><div class="block-step-content">
-								<h2><?php _e( '2 - Select Packaging', 'nsi' ); ?></h2>
+								<h2><?php _e( '2 - Select your packaging ', 'nsi' ); ?></h2>
 								<p><?php the_field('select_packaging'); ?></p>
 							</div>
 						</div>
@@ -56,7 +56,7 @@ get_header(); ?>
 						<div class="block-step">
 							<img src="<?php bloginfo('template_directory'); ?>/img/icon-design.svg" alt="icon Design"><!--
 						--><div class="block-step-content">
-								<h2><?php _e( '3 - Design your Artwork', 'nsi' ); ?></h2>
+								<h2><?php _e( '3 - Design your artwork ', 'nsi' ); ?></h2>
 								<p><?php the_field('design_artwork'); ?></p>
 							</div>
 						</div>
@@ -64,7 +64,7 @@ get_header(); ?>
 						<div class="block-step">
 							<img src="<?php bloginfo('template_directory'); ?>/img/icon-pack-ship.svg" alt="icon Pack and Ship"><!--
 						--><div class="block-step-content">
-								<h2><?php _e( '4 - Pack and Ship', 'nsi' ); ?></h2>
+								<h2><?php _e( '4 - Select your shipping options', 'nsi' ); ?></h2>
 								<p><?php the_field('pack_and_ship'); ?></p>
 							</div>
 						</div>

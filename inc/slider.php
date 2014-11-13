@@ -1,8 +1,8 @@
 <?php
 	$argsSlider = array(
 		'post_type' 		=> 'home-slider', 	//Costum type Proyectos			
-		'order'				=> 'ASC',			// List in ascending order
-		'orderby'      		=> 'id',			// List them in their menu order
+		'order'				=> 'DESC',			// List in ascending order
+		'orderby'      		=> 'menu_order',	// List them in their menu order
 		'posts_per_page'	=>   -1, 			// Show all
 	);
 
@@ -26,7 +26,7 @@
 				<li>
 					<a href="<?php the_field('home_slider_link'); ?>">
 						<img src="<?php echo $image_slider['url']; ?>" alt="<?php echo $image_slider['alt']; ?>" >
-						<div class="slider-caption">
+						<div class="slider-caption" <?php if( get_field('color_slider') ) { ?>style="background-color:<?php the_field('color_slider'); ?>"<?php } ?> >
 							<div class="vertical-center">
 								<h2><?php the_title(); ?></h2>
 								<p>

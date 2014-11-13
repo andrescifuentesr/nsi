@@ -163,9 +163,10 @@
 		@include mq(phone) { margin-top: 1em; }
 	}
 
-	.one-fifth {
+	.one-sixth {
 		float: left;
-		width:20%;
+		width:percentage(1/6);
+		@include mq(tablet) { width:percentage(1/3);}
 		@include mq(phone) { width:50%;}
 
 			img {

@@ -4,7 +4,7 @@
 
 .site-header--top {
 	width:100%;
-	padding:1em 15%;
+	padding:0.75em 15%;
 	background: $white;
 	box-shadow: 0 1px 5px $gris-fonce;
 	@include mq(lap) { padding: 1em 10%;}
@@ -15,7 +15,7 @@
 .site-branding {
 	width: 22.5%;
 	display:inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
 	@include mq(tablet) { vertical-align: middle; }
 	@include mq(phone) { vertical-align: middle; }
 
@@ -36,17 +36,18 @@
 .nav-social {
 	// width: 400px;
 	// float: right;
+	margin-top: .5em;
 	width: 77.5%;
 	text-align: right;
 	display:inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
 	@include mq(tablet) { vertical-align: middle; }
 	@include mq(phone) {vertical-align: middle;}
 }
 
 .bt-label {
 	display:inline-block;
-	vertical-align:bottom;
+	vertical-align: middle;
 	width: 80%;
 	// width: 75%;
 	// margin-bottom: 1em;
@@ -64,7 +65,7 @@
 
 .wrapper-menu-social {
 	display:inline-block;
-	vertical-align:top;
+	vertical-align: middle;
 	width: 20%;
 	// width: 25%;
 	// margin-top: 0.5em;
