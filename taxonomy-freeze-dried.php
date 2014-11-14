@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="breadcrumb">
-				<img src="<?php bloginfo('template_directory'); ?>/img/image-header-superfood.jpg" alt="flowers">
+				<img src="<?php bloginfo('template_directory'); ?>/img/image-header-privat-brand.jpg" alt="image header privat brand">
 
 				<?php 
 					//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)

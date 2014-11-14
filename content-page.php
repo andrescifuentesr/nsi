@@ -15,23 +15,7 @@
 	<div class="entry-content">
 
 		<div class="block-images">
-			<?php
-				$args = array(
-					'post_parent'    => $post->ID,		// For the current post
-					'post_type'      => 'attachment',	// Get all post attachments
-					'post_mime_type' => 'image',		// Only grab images
-					'order'			 => 'ASC',			// List in ascending order
-					'orderby'        => 'rand',			// List them in their menu order
-					'numberposts'    => -1, 			// Show all attachments
-					'post_status'    => null,			// For any post status
-				);
-			 
-				// Retrieve the items that match our query; in this case, images attached to the current post.
-				$attachments = get_posts($args); 
-			?>
-			<?php foreach ($attachments as $attachment) { ?>
-				<?php echo wp_get_attachment_image($attachment->ID, 'full', false, $default_attr); ?>
-			<?php } // End of foreach Loop?>	
+			<?php the_post_thumbnail('full'); ?>
 		</div><!--
 		
 	--><div class="block-content">
